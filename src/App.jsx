@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className='flex h-screen flex-wrap bg-[url("../public/images/Overlay%20(44).jpg")] bg-cover bg-no-repeat bg-center'>
+      <div className='flex h-screen flex-wrap '>
         <SideMenu/>
         <Home/>
        </div>
