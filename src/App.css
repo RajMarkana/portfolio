@@ -3,7 +3,7 @@ html{
 }
 
 body{
-    background-image: url('/public//images//Overlay\ \(44\).jpg');
+    background-image: url('./public//images//Overlay\ \(44\).jpg');
     background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
