@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className='flex h-screen flex-wrap '>
+      <div className='flex h-screen flex-wrap'>
         <SideMenu/>
         <Home/>
        </div>
