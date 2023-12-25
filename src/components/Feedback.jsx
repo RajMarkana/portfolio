@@ -33,7 +33,7 @@ const Feedback = () => {
                     <div className="flex justify-between p-4">
                         <div className="flex space-x-4">
                             <div>
-                                <img src="./../../public/images/client (1).jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
+                                <img src="https://img.freepik.com/premium-vector/user-profile-icon-flat-style-member-avatar-vector-illustration-isolated-background-human-permission-sign-business-concept_157943-15752.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
                             </div>
                             <div>
                                 <h4 className="font-bold">Mayursinh Vaja</h4>
