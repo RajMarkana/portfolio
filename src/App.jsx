@@ -66,8 +66,8 @@ const App = () => {
 
   useEffect(() => {
 
-    const initialX = (window.innerWidth - 1350) / 2;
-    const initialY = (window.innerHeight - 800) / 2;
+    const initialX = (window.innerWidth - 1000) / 2;
+    const initialY = (window.innerHeight - 500) / 2;
     setWindowPosition({ x: initialX, y: initialY });
   }, []);
 
