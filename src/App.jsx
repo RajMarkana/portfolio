@@ -8,10 +8,11 @@ import Screen from './components/Screen';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Music from './components/Music';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [showMainContent, setShowMainContent] = useState(true); // Set to true initially
+  const [showMainContent, setShowMainContent] = useState(false); // Set to true initially
   const [showMusic, setShowMusic] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
@@ -154,6 +155,7 @@ const App = () => {
           )}
         </div>
       )}
+      <SpeedInsights />
     </>
   );
 };
