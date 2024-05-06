@@ -1,0 +1,52 @@
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000; /* Change background color as needed */
+  }
+  
+  .windows-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .windows-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .loader {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #ffffff; /* Change border color as needed */
+    animation: spin 1.5s linear infinite;
+  }
+  
+  .content {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .content.visible {
+    opacity: 1;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spinMusic {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .animateSpin {
+    animation: spinMusic 3s linear infinite; /* Adjust the duration here */
+  }
