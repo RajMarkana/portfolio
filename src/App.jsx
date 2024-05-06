@@ -79,7 +79,7 @@ const App = () => {
     if (window.innerWidth <= 800) {
       // If window width is less than or equal to 768 (mobile device), set window position to center
       const initialX = (window.innerWidth - 600) / 2; // Adjust width as needed
-      const initialY = (window.innerHeight - 700) / 2; // Adjust height as needed
+      const initialY = (window.innerHeight - 400) / 2; // Adjust height as needed
       setWindowPosition({ x: initialX, y: initialY });
     }
   }, []);
@@ -106,41 +106,52 @@ const App = () => {
         <Loading />
       ) : (
         <div className="flex flex-col h-screen" onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onTouchMove={handleMouseMove} onTouchEnd={handleMouseUp}>
-          <div className="flex flex-grow bg-cover flex-col items-center justify-center p-4" style={{ backgroundImage: 'url("/w9.jpg")' }}>
-            {showMainContent ? (
-              <div className='w-4/5 h-3/4 absolute shadow-2xl' style={{ top: windowPosition.y, left: windowPosition.x, cursor: isDragging ? 'grabbing' : 'default', userSelect: 'none' }} onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
-                <div className="bg-slate-300 rounded-tl-lg rounded-tr-lg w-full text-slate-900 p-3 flex justify-between flex-wrap gap-3 items-center">
-                  <div className='flex justify-center items-center'>
-                    <FaDesktop className='text-blue-500' /><p className='ml-2'>This PC</p>
-                  </div>
-                  <div className='flex items-center justify-around'>
-                    <IoIosArrowBack className="mr-2 text-xl cursor-pointer" />
-                    <IoIosArrowForward className="ml-2 text-xl cursor-pointer" />
-                    <div className='w-4'></div>
-                    <div className="bg-white w-96 p-2 rounded-md ">
-                      <p>RajMarkana {formatPath(location.pathname)}</p>
-                    </div>
-                  </div>
-                  <div className='flex items-center'>
-                    <div className="bg-white w-72 p-2 rounded-md flex justify-center items-center">
-                      <input type="text" placeholder='Search This PC' className='border-none outline-none w-full' />
-                      <IoIosSearch className='text-xl' />
-                    </div>
-                  </div>
-                  <div className="flex justify-center items-center">
-                    <div className=" mr-2 hover:bg-slate-200 p-2 cursor-pointer rounded-sm" onClick={() => { setShowMainContent(false) }}><FaRegWindowMinimize /></div>
-                    <div id="maximize" className="mr-2 hover:bg-slate-200 cursor-pointer p-2 rounded-sm"><FaRegSquare /></div>
-                    <div className="hover:bg-red-500 cursor-pointer rounded-sm text-2xl p-1 hover:text-white" onClick={() => { setShowMainContent(false) }}><IoMdClose /></div>
-                  </div>
-                </div>
-                <Screen />
+          {window.innerWidth <= 700 ? (
+            <>
+              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/w9.jpg')", filter: "blur(20px)" }}></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <img src="./4.png" width={400} alt="" />
+                <h1 className='mt-4 text-lg text-center text-white'>Switch to Desktop or Laptop <br/>for Best Experience</h1>
               </div>
-            ) : (
-              <div></div>
-            )}
-            {showMusic ? (<Music closeMusic={() => { setShowMusic(false) }} />) : (<div></div>)}
-          </div>
-          <Bottom onClick={handleShowMainContent} openMusic={handleShowMusic} />
+            </>
+
+          ) : (
+            <>
+              <div className="flex flex-grow bg-cover flex-col items-center justify-center p-4" style={{ backgroundImage: 'url("/w9.jpg")' }}>
+                {showMainContent && (
+                  <div className='w-4/5 h-3/4 absolute shadow-2xl' style={{ top: windowPosition.y, left: windowPosition.x, cursor: isDragging ? 'grabbing' : 'default', userSelect: 'none' }} onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
+                    <div className="bg-slate-300 rounded-tl-lg rounded-tr-lg w-full text-slate-900 p-3 flex justify-between flex-wrap gap-3 items-center">
+                      <div className='flex justify-center items-center'>
+                        <FaDesktop className='text-blue-500' /><p className='ml-2'>This PC</p>
+                      </div>
+                      <div className='flex items-center justify-around'>
+                        <IoIosArrowBack className="mr-2 text-xl cursor-pointer" />
+                        <IoIosArrowForward className="ml-2 text-xl cursor-pointer" />
+                        <div className='w-4'></div>
+                        <div className="bg-white w-96 p-2 rounded-md ">
+                          <p>RajMarkana {formatPath(location.pathname)}</p>
+                        </div>
+                      </div>
+                      <div className='flex items-center'>
+                        <div className="bg-white w-72 p-2 rounded-md flex justify-center items-center">
+                          <input type="text" placeholder='Search This PC' className='border-none outline-none w-full' />
+                          <IoIosSearch className='text-xl' />
+                        </div>
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <div className=" mr-2 hover:bg-slate-200 p-2 cursor-pointer rounded-sm" onClick={() => { setShowMainContent(false) }}><FaRegWindowMinimize /></div>
+                        <div id="maximize" className="mr-2 hover:bg-slate-200 cursor-pointer p-2 rounded-sm"><FaRegSquare /></div>
+                        <div className="hover:bg-red-500 cursor-pointer rounded-sm text-2xl p-1 hover:text-white" onClick={() => { setShowMainContent(false) }}><IoMdClose /></div>
+                      </div>
+                    </div>
+                    <Screen />
+                  </div>
+                )}
+                {showMusic ? (<Music closeMusic={() => { setShowMusic(false) }} />) : (<div></div>)}
+              </div>
+              <Bottom onClick={handleShowMainContent} openMusic={handleShowMusic} />
+            </>
+          )}
         </div>
       )}
     </>

@@ -44,7 +44,7 @@ const Education = () => {
                     </div>
                 </div>
             </div>
-            <div data-aos="fade-in" data-aos-duration="3000" className='px-10 mb-14'>
+            <div className='px-10 mb-14'>
                 <div className='flex items-center text-blue-500 mb-10 text-3xl' >
                     <MdOutlineWork className='mr-2' />
                     <h1 className='  font-semibold '>Experience</h1>
@@ -52,7 +52,7 @@ const Education = () => {
                 <div className='bg-blue-50 rounded-xl  p-10'>
                     <p className='text-2xl text-blue-500'>Freelancer</p>
                     <p className='text-thin'>Wordpress Developer & Graphics Designing • 2+ Years</p>
-                    <div className='flex justify-between mt-10 gap-20 items-center'>
+                    <div className='flex flex-wrap justify-between mt-10 gap-20 items-center'>
                         <img src="./freelancerlogo.png" width={280} alt="" />
                         <img src="./fiverrlogo.png" width={200} alt="" />
                         <img src="./upworklogo.png" width={200} alt="" />

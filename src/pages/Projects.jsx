@@ -52,7 +52,7 @@ const Projects = () => {
                 </div>
                 <div data-aos="fade-down" data-aos-duration="1500" className="flex flex-wrap ">
                     {projects.map((project, index) => (
-                        <div className="xl:w-1/3 md:w-1/3 p-4" key={index}>
+                        <div className="lg:w-1/3 sm:w-3/4 md:w-3/5 p-4" key={index}>
                             <div className="bg-gray-100 p-6 transition-all hover:bg-white hover:shadow-2xl rounded-xl">
                                 <img className="h-40 bg-white rounded-xl w-full object-contain mb-6" src={project.image} alt={project.name} />
                                 <h2 className="text-xl text-blue-500 font-semibold title-font mb-4">{project.name}</h2>
