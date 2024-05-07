@@ -38,7 +38,7 @@ const projects = [
         name: 'WeatherCloud',
         description: 'Weather search application enabling users to instantly access weather information for any city worldwide.',
         image: './weathercloud.png',
-        link: 'YOUR_PROJECT_LINK_HERE' // Replace with your project's link
+        link: 'https://rajmarkana.github.io/WeatherCloud/' // Replace with your project's link
     }
 ];
 

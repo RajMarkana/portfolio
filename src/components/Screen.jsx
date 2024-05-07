@@ -7,6 +7,7 @@ import Skills from '../pages/Skills';
 import Gallery from '../pages/Gallery';
 import Projects from '../pages/Projects';
 import Contact from '../pages/Contact';
+import Error404 from '../pages/Error404';
 
 
 
@@ -64,7 +65,7 @@ const Screen = () => {
                     <Route path="/gallery" element={<Gallery />} />
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/contact" element={<Contact />} />
-
+                    <Route path="/*"  element={<Error404 />} />
                 </Routes>
             </div>
         </div></>
