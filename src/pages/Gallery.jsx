@@ -73,15 +73,15 @@ const Gallery = () => {
 };
 
 const certificates = [
-    { src: 'ip.jpg' },
     { src: 'spm.jpg' },
     { src: 'lcs.jpg' },
-    { src: 'jda.jpg' },
     { src: 'gai.png' },
     { src: 'tce.jpg' },
+    { src: 'fdh.jpg' },
     { src: 'gui.jpg' },
     { src: 'hsb.jpg' },
     { src: 'hsi.jpg' },
+    { src: 'mtf.jpg' },
 
     // Add more certificates as needed
 ];

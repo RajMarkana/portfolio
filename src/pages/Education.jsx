@@ -8,7 +8,7 @@ const Education = () => {
         <>
             <div className='grid grid-cols-1 lg:grid-cols-2'>
                 <div className=' justify-center flex items-center'>
-                    <img  src="./6.png" width={400} className='' alt="" /></div>
+                    <img src="./6.png" width={400} className='' alt="" /></div>
                 <div className='px-10 py-10 flex justify-center items-center'>
                     <div>
                         <div data-aos="fade-in" data-aos-duration="1000" className='flex items-center text-blue-500 mb-10 text-3xl' >
@@ -51,11 +51,31 @@ const Education = () => {
                 </div>
                 <div className='bg-blue-50 rounded-xl  p-10'>
                     <p className='text-2xl text-blue-500'>Freelancer</p>
-                    <p className='text-thin'>Wordpress Developer & Graphics Designing • 2+ Years</p>
+                    <p className='text-thin'>Wordpress Developer & Graphics Designer • 2+ Years</p>
                     <div className='flex flex-wrap justify-between mt-10 gap-20 items-center'>
                         <img src="./freelancerlogo.png" width={280} alt="" />
                         <img src="./fiverrlogo.png" width={200} alt="" />
                         <img src="./upworklogo.png" width={200} alt="" />
+                    </div>
+
+                </div>
+                <br/><br/>
+                <hr />
+
+                <div class="py-10 flex flex-wrap md:flex-nowrap">
+                    <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                        <span class="font-semibold title-font text-gray-700">INTERNSHIP</span>
+                        <span class="mt-1 text-gray-500 text-sm">13 May 2024 - 13 Nov 2024 </span>
+                    </div>
+                    <div class="md:flex-grow">
+                        <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">MERN Stack Developer at <a href='https://www.charusat.ac.in/' target='_blank' class="text-blue-500 underline ">Charusat University</a></h2>
+                        <p class="leading-relaxed">Developed Quiz Portal for Students and Faculty to Create and Manage Quizzes for Students and Students to Attempt Quizzes and Evaluate their Performance.</p>
+                        {/* <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
+                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a> */}
                     </div>
                 </div>
             </div>

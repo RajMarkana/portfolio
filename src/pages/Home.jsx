@@ -10,9 +10,9 @@ const Home = () => {
   const [randomImage, setRandomImage] = useState('');
 
   useEffect(() => {
-    const images = ['./profile1.png','./profile2.png','./profile3.png','./profile4.png'];
+    const images = ['./profile7.png'];
     const randomIndex = Math.floor(Math.random() * images.length);
-    setRandomImage(images[randomIndex]);
+    setRandomImage(images[0]);
   }, []);
 
   useEffect(() => {
