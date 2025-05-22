@@ -70,12 +70,16 @@ const Education = () => {
                     <div class="md:flex-grow">
                         <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">MERN Stack Developer at <a href='https://www.charusat.ac.in/' target='_blank' class="text-blue-500 underline ">Charusat University</a></h2>
                         <p class="leading-relaxed">Developed Quiz Portal for Students and Faculty to Create and Manage Quizzes for Students and Students to Attempt Quizzes and Evaluate their Performance.</p>
-                        {/* <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
-                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14"></path>
-                                <path d="M12 5l7 7-7 7"></path>
-                            </svg>
-                        </a> */}
+                    </div>
+                </div>
+                <div class="py-10 flex flex-wrap md:flex-nowrap">
+                    <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                        <span class="font-semibold title-font text-gray-700">INTERNSHIP</span>
+                        <span class="mt-1 text-gray-500 text-sm">25 April 2025 - 25 June 2024 </span>
+                    </div>
+                    <div class="md:flex-grow">
+                        <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Python Developer at <a href='https://infotact.in/' target='_blank' class="text-blue-500 underline ">Infotact Solutions</a></h2>
+                        <p class="leading-relaxed">Developed Quiz Portal for Students and Faculty to Create and Manage Quizzes for Students and Students to Attempt Quizzes and Evaluate their Performance.</p>
                     </div>
                 </div>
             </div>

@@ -45,7 +45,7 @@ const Contact = () => {
                 <a href="https://www.linkedin.com/in/rajmarkana/" target="_blank" rel="noopener noreferrer" className="rounded-lg p-5 text-slate-700 transition-all hover:bg-slate-100 hover:text-blue-700 items-center mb-3 w-fit">
                     <AiFillLinkedin size={32} />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="rounded-lg p-5 text-slate-700 transition-all hover:bg-slate-100 hover:text-black items-center mb-3 w-fit">
+                <a href="https://www.x.com/rajmarkana" target="_blank" rel="noopener noreferrer" className="rounded-lg p-5 text-slate-700 transition-all hover:bg-slate-100 hover:text-black items-center mb-3 w-fit">
                     <FaXTwitter size={32} />
                 </a>
                 <a href="https://github.com/RajMarkana" target="_blank" rel="noopener noreferrer" className="rounded-lg p-5 text-slate-700  transition-all hover:bg-slate-100 hover:text-black items-center mb-3 w-fit">

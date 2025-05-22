@@ -6,7 +6,7 @@ const Home = () => {
   const [typingIndex, setTypingIndex] = useState(0);
   const [typingText, setTypingText] = useState('');
   const [showCursor, setShowCursor] = useState(false);
-  const typingOptions = ['Web Developer', 'Data Analytics', 'Graphic Designer', 'Freelancer'];
+  const typingOptions = ['Web Developer', 'Data Analytics', 'AI Developer', 'Freelancer','UI/UX'];
   const [randomImage, setRandomImage] = useState('');
 
   useEffect(() => {

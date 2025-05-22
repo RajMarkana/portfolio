@@ -45,6 +45,12 @@ const projects = [
         description: 'Weather search application enabling users to instantly access weather information for any city worldwide.',
         image: './weathercloud.png',
         link: 'https://rajmarkana.github.io/WeatherCloud/' // Replace with your project's link
+    },
+    {
+        name: 'OnePrept',
+        description: 'Built an AI mock interview platform using LLMs for dynamic Q&A and real-time feedback. Added user dashboards and auto-generated HR-style reports.',
+        image: './oneprept.png',
+        link: 'https://rajmarkana.github.io/WeatherCloud/' // Replace with your project's link
     }
 ];
 
