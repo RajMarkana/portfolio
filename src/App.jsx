@@ -10,6 +10,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Music from './components/Music';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
+
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -129,39 +131,39 @@ const App = () => {
               <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/w9.jpg')", filter: "blur(20px)" }}></div>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <img src="./4.png" width={400} alt="" />
-                <h1 className='mt-4 text-lg text-center text-white'>Switch to Desktop or Laptop <br/>for Best Experience</h1>
+                <h1 className='mt-4 text-lg text-center text-white'>Switch to Desktop or Laptop <br />for Best Experience</h1>
               </div>
             </>
           ) : (
             <>
               <div className="flex flex-grow bg-cover flex-col items-center justify-center p-4" style={{ backgroundImage: 'url("/w9.jpg")' }}>
                 {showMainContent && (
-                  <div 
-                    className='w-4/5 h-3/4 absolute shadow-2xl' 
-                    style={{ 
-                      top: screenPosition.y, 
-                      left: screenPosition.x, 
-                      cursor: isDragging && activeWindow === 'screen' ? 'grabbing' : 'default', 
+                  <div
+                    className='w-4/5 h-3/4 absolute shadow-2xl'
+                    style={{
+                      top: screenPosition.y,
+                      left: screenPosition.x,
+                      cursor: isDragging && activeWindow === 'screen' ? 'grabbing' : 'default',
                       userSelect: 'none',
                       zIndex: activeWindow === 'screen' ? 50 : 40
-                    }} 
-                    onMouseDown={(e) => handleMouseDown(e, 'screen')} 
+                    }}
+                    onMouseDown={(e) => handleMouseDown(e, 'screen')}
                     onTouchStart={(e) => handleTouchStart(e, 'screen')}
                   >
                     <Screen closeScreen={() => { setShowMainContent(false) }} />
                   </div>
                 )}
                 {showBrowser && (
-                  <div 
-                    className='w-4/5 h-3/4 absolute shadow-2xl' 
-                    style={{ 
-                      top: vscodePosition.y, 
-                      left: vscodePosition.x, 
-                      cursor: isDragging && activeWindow === 'vscode' ? 'grabbing' : 'default', 
+                  <div
+                    className='w-4/5 h-3/4 absolute shadow-2xl'
+                    style={{
+                      top: vscodePosition.y,
+                      left: vscodePosition.x,
+                      cursor: isDragging && activeWindow === 'vscode' ? 'grabbing' : 'default',
                       userSelect: 'none',
                       zIndex: activeWindow === 'vscode' ? 50 : 40
-                    }} 
-                    onMouseDown={(e) => handleMouseDown(e, 'vscode')} 
+                    }}
+                    onMouseDown={(e) => handleMouseDown(e, 'vscode')}
                     onTouchStart={(e) => handleTouchStart(e, 'vscode')}
                   >
                     <VsCodeScreen closeScreen={() => { setShowBrowser(false) }} />
@@ -169,15 +171,16 @@ const App = () => {
                 )}
                 {showMusic ? (<Music closeMusic={() => { setShowMusic(false) }} />) : (<div></div>)}
               </div>
-              <Bottom 
-                onClick={handleShowMainContent} 
-                openMusic={handleShowMusic} 
+              <Bottom
+                onClick={handleShowMainContent}
+                openMusic={handleShowMusic}
                 openBrowser={() => setShowBrowser(true)}
               />
             </>
           )}
         </div>
       )}
+      <Analytics />
       <SpeedInsights />
     </>
   );
